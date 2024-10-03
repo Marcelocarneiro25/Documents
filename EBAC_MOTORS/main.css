@@ -13,13 +13,20 @@ html{
     width: 100%;
     margin: 0 auto;
 }
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
-header {
+header , footer{
     background-color: #192a56;
     padding-top: 16px ;
     color: #fff;
 }
-header > .container{
+header > .container,
+footer .container{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
@@ -76,4 +83,72 @@ section h2{
 }
 .largura-texto p{
     text-align: justify;
+}
+.lista-veiculos li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+.lista-veiculos li img{
+    max-width: 100%;
+}
+.lista-veiculos li h3{
+    margin: 16px 0;
+}
+.lista-veiculos li p{
+    text-align: justify;
+}
+.lista-veiculos{
+    flex-wrap: wrap;
+}
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    margin-top:8px ;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.price{
+    margin: 16px 0;
+    display: block;
+}
+.item-central{
+    margin: 0 5%;
+}
+.forme-campo{
+    margin-bottom: 16px;
+}
+.forme-campo label{
+    font-weight: bold;
+    display: block;
+}
+.forme-campo input,
+.forme-campo textarea{
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+.forme-campo textarea{
+    resize: none;
+    height: 120px;
+}
+form{
+    width: 360px;
+}
+form button{
+    width: 120px;
+}
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+footer li img{
+    width: 32px;
 }

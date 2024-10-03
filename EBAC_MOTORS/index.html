@@ -211,23 +211,23 @@
             <form action="">
                 <div class="forme-campo">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome">
+                    <input type="text" id="nome" name="nome">
                 </div>
                 <div class="forme-campo">
                     <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone">
+                    <input type="tel" id="telefone" name="telefone">
                 </div>
                 <div class="forme-campo">
                     <label for="email">Email:</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="forme-campo">
                     <label for="veiculo-interesse">Veiculo de Interesse:</label>
-                    <input type="text" id="veiculo-interesse">
+                    <input type="text" id="veiculo-interesse" name="veiculo-interesse">
                 </div>
                 <div class="forme-campo">
                     <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem"></textarea>
+                    <textarea id="mensagem" name="mensagem"></textarea>
                 </div>
                 <button type="submit">Enviar</button>
             </form>
@@ -264,6 +264,12 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./JS/jquery.mask.min.js"></script>
+    <script src="./JS/jquery.validate.min.js"></script>
+    <script src="./JS/messages_pt_BR.min.js"></script>
+
+
+    <!-- inicio de scrip de seleção-->
     <script>
         $(document).ready(function(){
             $('#caroucel-imagens').slick({
@@ -273,6 +279,26 @@
             $('.menu-hamburguer').click(function(){
                 $('nav').slideToggle()
             });
+
+            $('#telefone').mask('(00) 00000-0000')
+
+            $('form').validate({
+                rules:{
+                    nome:{
+                        required:true
+                    },
+                    telefone:{
+                        required:true
+                    },
+                    email:{
+                        required:true,
+                        email:true
+                    }
+                },
+                messages: {
+                    nome: 'Por favor, insira seu nome.'
+                }
+            })
 
         })
     </script>

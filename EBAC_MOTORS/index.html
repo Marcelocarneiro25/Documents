@@ -274,6 +274,7 @@
         $(document).ready(function(){
             $('#caroucel-imagens').slick({
                 autoplay:true,
+                arrows:false
             });
 
             $('.menu-hamburguer').click(function(){
@@ -297,6 +298,12 @@
                 },
                 messages: {
                     nome: 'Por favor, insira seu nome.'
+                },
+                subimitHandler:function(form){
+                    console.log
+                },
+                invalidHandler:function(evento, validador){
+                    
                 }
             })
 

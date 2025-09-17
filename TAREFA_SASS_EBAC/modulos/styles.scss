@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'reset';
+@import 'header';
+@import 'products';
+@import 'responsive';
+
+body {
+  background-color: $color-background;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
